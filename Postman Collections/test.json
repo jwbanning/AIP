@@ -1,0 +1,520 @@
+{
+	"info": {
+		"_postman_id": "230c71fd-2785-4183-9ec8-6b1f5cf80e3b",
+		"name": "Vehicle Status",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "status",
+			"item": [
+				{
+					"name": "battery",
+					"item": [
+						{
+							"name": "Battery",
+							"id": "36d6377c-5148-4f35-80c0-b62ef01b9ced",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": "{{baseUrl}}/status/battery",
+								"description": "Returns a status and health report for all connected battery elements (includes EV batteries as well). \n\nAs status checks are core features of the PM connected car experience, this feature is allowed by default in the customer account settings. However, users do have the option to revoke remote status reporting access to APIs and rely only on the car dashboard indicators. Thus, developers should check for a successful response before continuing with any further workflows.  \n"
+							},
+							"response": [
+								{
+									"id": "3157e5b0-26cc-46f4-8193-f177289da69c",
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": "{{baseUrl}}/status/battery"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"cca\": \"<number>\",\n  \"charging\": \"<boolean>\",\n  \"health\": \"<string>\",\n  \"install\": \"<string>\",\n  \"overvolt\": \"<boolean>\",\n  \"type\": \"<string>\",\n  \"voltage\": \"<number>\"\n}"
+								}
+							]
+						}
+					],
+					"id": "2560a0ff-ce3a-4e8c-acf7-5932955b20c4"
+				},
+				{
+					"name": "doors",
+					"item": [
+						{
+							"name": "Doors",
+							"id": "d67603d8-f2c7-4528-b58b-8e1f13a1f1b5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": "{{baseUrl}}/status/doors",
+								"description": "Returns a status report indicating which, if any doors are open at the time of the request. \n\nAs status checks are core features of the PM connected car experience, this feature is allowed by default in the customer account settings. However, users do have the option to revoke remote status reporting access to APIs and rely only on the car dashboard indicators. Thus, developers should check for a successful response before continuing with any further workflows.  \n"
+							},
+							"response": [
+								{
+									"id": "888fb5e1-0601-485f-a691-371fb91d1b7a",
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": "{{baseUrl}}/status/doors"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"front\": {\n    \"left\": {\n      \"open\": \"<boolean>\"\n    },\n    \"right\": {\n      \"open\": \"<boolean>\"\n    }\n  },\n  \"rear\": {\n    \"left\": {\n      \"open\": \"<boolean>\"\n    },\n    \"right\": {\n      \"open\": \"<boolean>\"\n    }\n  }\n}"
+								}
+							]
+						}
+					],
+					"id": "f7ffc7e7-48e2-4424-a50c-63cca907894c"
+				},
+				{
+					"name": "engine",
+					"item": [
+						{
+							"name": "Engine",
+							"id": "47469275-4d49-4bb2-bedf-3b2ac6fe1fb9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": "{{baseUrl}}/status/engine",
+								"description": "Returns a complete status and health update for the engine. \n\nAs status checks are core features of the PM connected car experience, this feature is allowed by default in the customer account settings. However, users do have the option to revoke remote status reporting access to APIs and rely only on the car dashboard indicators. Thus, developers should check for a successful response before continuing with any further workflows.  \n"
+							},
+							"response": [
+								{
+									"id": "f31ae650-6be5-48e3-86a0-339ca936a0b6",
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": "{{baseUrl}}/status/engine"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"coolantTemp\": \"<number>\",\n  \"oilPressure\": \"<number>\",\n  \"oilTemp\": \"<number>\",\n  \"rpm\": \"<number>\",\n  \"running\": \"<boolean>\"\n}"
+								}
+							]
+						}
+					],
+					"id": "d1a8af8a-2b17-49d3-979d-1ab71c6b79b5"
+				},
+				{
+					"name": "fuel",
+					"item": [
+						{
+							"name": "Fuel",
+							"id": "29f773a4-faa6-4d02-8021-d60d42db80cf",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": "{{baseUrl}}/status/fuel",
+								"description": "Returns a status update for the fuel tank. \n\nAs status checks are core features of the PM connected car experience, this feature is allowed by default in the customer account settings. However, users do have the option to revoke remote status reporting access to APIs and rely only on the car dashboard indicators. Thus, developers should check for a successful response before continuing with any further workflows.  \n"
+							},
+							"response": [
+								{
+									"id": "8823a3ef-640f-4806-be05-4fa6d392dacd",
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": "{{baseUrl}}/status/fuel"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"ethanolContent\": \"<number>\",\n  \"gas\": \"<boolean>\",\n  \"level\": \"<number>\",\n  \"pressure\": \"<number>\"\n}"
+								}
+							]
+						}
+					],
+					"id": "f7b28a12-e396-4ff0-a15a-1106bad8d7f4"
+				},
+				{
+					"name": "interior",
+					"item": [
+						{
+							"name": "Interior",
+							"id": "abe0b86f-efab-44b3-94d4-c3d5cdb992c1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": "{{baseUrl}}/status/interior",
+								"description": "Returns a complete status update for elements affecting the car cabin. \n\nAs status checks are core features of the PM connected car experience, this feature is allowed by default in the customer account settings. However, users do have the option to revoke remote status reporting access to APIs and rely only on the car dashboard indicators. Thus, developers should check for a successful response before continuing with any further workflows.  \n"
+							},
+							"response": [
+								{
+									"id": "76f0e6ad-04b3-46a6-8d3b-37f292eff76f",
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": "{{baseUrl}}/status/interior"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"alarm\": \"<string>\",\n  \"gear\": \"<string>\",\n  \"lights\": \"<string>\",\n  \"temp\": \"<number>\"\n}"
+								}
+							]
+						}
+					],
+					"id": "ca44075b-0c1a-4121-969f-91352d1b48b1"
+				},
+				{
+					"name": "lights",
+					"item": [
+						{
+							"name": "Lights",
+							"id": "705eac1f-465a-4bcb-b9d0-9dd715f68b84",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": "{{baseUrl}}/status/lights",
+								"description": "Returns a status update for both internal and external car lights. \n\nAs status checks are core features of the PM connected car experience, this feature is allowed by default in the customer account settings. However, users do have the option to revoke remote status reporting access to APIs and rely only on the car dashboard indicators. Thus, developers should check for a successful response before continuing with any further workflows.  \n"
+							},
+							"response": [
+								{
+									"id": "f51c0d39-398a-4810-9527-58c414ab261f",
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": "{{baseUrl}}/status/lights"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"brights\": \"<boolean>\",\n  \"daytime\": \"<boolean>\",\n  \"hazards\": \"<boolean>\",\n  \"leftSignal\": \"<boolean>\",\n  \"main\": \"<boolean>\",\n  \"rightSignal\": \"<boolean>\",\n  \"sidelight\": \"<boolean>\"\n}"
+								}
+							]
+						}
+					],
+					"id": "119e768d-3ec2-4998-af27-84a7a7a06577"
+				},
+				{
+					"name": "odometer",
+					"item": [
+						{
+							"name": "Odometer",
+							"id": "d72181df-da0b-4e8f-82fa-0d584473b26c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": "{{baseUrl}}/status/odometer",
+								"description": "Returns a the current odometer reading in both km and miles. \n\nAs status checks are core features of the PM connected car experience, this feature is allowed by default in the customer account settings. However, users do have the option to revoke remote status reporting access to APIs and rely only on the car dashboard indicators. Thus, developers should check for a successful response before continuing with any further workflows.  \n"
+							},
+							"response": [
+								{
+									"id": "969955f9-60c4-489d-a427-0666ad553753",
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": "{{baseUrl}}/status/odometer"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"km\": \"<number>\",\n  \"miles\": \"<number>\"\n}"
+								}
+							]
+						}
+					],
+					"id": "d75f12b0-a684-473a-90a8-87c461a00f01"
+				},
+				{
+					"name": "roof",
+					"item": [
+						{
+							"name": "Roof",
+							"id": "bc23f9ff-6d6e-4b21-8f4d-831806ec9c56",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": "{{baseUrl}}/status/roof",
+								"description": "Returns a status update for all connected roof elements. \n\nAs status checks are core features of the PM connected car experience, this feature is allowed by default in the customer account settings. However, users do have the option to revoke remote status reporting access to APIs and rely only on the car dashboard indicators. Thus, developers should check for a successful response before continuing with any further workflows.  \n"
+							},
+							"response": [
+								{
+									"id": "79baf6db-6f04-4ab5-99e5-b3526cd208bb",
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": "{{baseUrl}}/status/roof"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"convertible\": \"<string>\",\n  \"sunroofOpen\": \"<boolean>\"\n}"
+								}
+							]
+						}
+					],
+					"id": "2a1b7c26-f8a7-4cb2-84dd-34db9ae75da6"
+				},
+				{
+					"name": "windows",
+					"item": [
+						{
+							"name": "Windows",
+							"id": "083d1197-cf44-4331-bf26-71bd6c352faa",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": "{{baseUrl}}/status/windows",
+								"description": "Returns a status update for all connected window elements. \n\nAs status checks are core features of the PM connected car experience, this feature is allowed by default in the customer account settings. However, users do have the option to revoke remote status reporting access to APIs and rely only on the car dashboard indicators. Thus, developers should check for a successful response before continuing with any further workflows.  \n"
+							},
+							"response": [
+								{
+									"id": "afaab362-1172-4bfa-b101-75ae138cf96d",
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": "{{baseUrl}}/status/windows"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"front\": {\n    \"left\": {\n      \"open\": \"<boolean>\"\n    },\n    \"right\": {\n      \"open\": \"<boolean>\"\n    }\n  },\n  \"rear\": {\n    \"left\": {\n      \"open\": \"<boolean>\"\n    },\n    \"right\": {\n      \"open\": \"<boolean>\"\n    }\n  }\n}"
+								}
+							]
+						}
+					],
+					"id": "39ad984d-7d26-4125-b058-0c651ac95212"
+				},
+				{
+					"name": "Complete Status",
+					"id": "585eebf9-26eb-44f9-bc83-72d7dc1b3da6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/status",
+						"description": "Upon successful execution, returns a complete status update encompassing all connected elements. \n\nAs status checks are core features of the PM connected car experience, this feature is allowed by default in the customer account settings. However, users do have the option to revoke remote status reporting access to APIs and rely only on the car dashboard indicators. Thus, developers should check for a successful response before continuing with any further workflows.  \n"
+					},
+					"response": [
+						{
+							"id": "761193b0-a4cd-47bf-beea-062973df3d47",
+							"name": "Status retrived successfully",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseUrl}}/status"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						}
+					]
+				}
+			],
+			"id": "995f3bbd-29a2-49e0-83d6-6840755563d1"
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "{{url}}"
+		}
+	]
+}
