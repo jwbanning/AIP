@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "fd6c48f8-5995-4c7f-bb9c-8487a4ecfdef",
-		"name": "Status",
+		"_postman_id": "5c8d376b-2820-4fae-9169-769d3060e11a",
+		"name": "Vehicle Status",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "16913431-fd6c48f8-5995-4c7f-bb9c-8487a4ecfdef"
+		"_uid": "16913431-5c8d376b-2820-4fae-9169-769d3060e11a"
 	},
 	"item": [
 		{
@@ -13,8 +13,8 @@
 					"name": "battery",
 					"item": [
 						{
-							"name": "Battery",
-							"id": "03e34553-6ddf-46e7-8085-5f304645011c",
+							"name": "/status/battery",
+							"id": "d3d8c656-93a2-4208-9042-cc56fdd4a6a3",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -40,7 +40,7 @@
 							},
 							"response": [
 								{
-									"id": "8c4d518f-7ee5-40cb-87eb-853daac2fea3",
+									"id": "78ff247a-18d9-4e6e-afef-e113bc3d6558",
 									"name": "Success",
 									"originalRequest": {
 										"method": "GET",
@@ -65,7 +65,6 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -73,19 +72,19 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"cca\": \"<number>\",\n  \"charging\": \"<boolean>\",\n  \"health\": \"<string>\",\n  \"install\": \"<string>\",\n  \"overvolt\": \"<boolean>\",\n  \"type\": \"<string>\",\n  \"voltage\": \"<number>\"\n}"
+									"body": "{\n  \"cca\": 600,\n  \"charging\": true,\n  \"health\": \"good\",\n  \"install\": \"2020-02-02\",\n  \"overvolt\": false,\n  \"type\": \"AGM\",\n  \"voltage\": 14.2\n}"
 								}
 							]
 						}
 					],
-					"id": "4c3bf79f-6d41-44cf-bbd3-689e83b706b0"
+					"id": "4c2ad030-2d3e-415d-9b88-e2bbe5dc7a38"
 				},
 				{
 					"name": "doors",
 					"item": [
 						{
-							"name": "Doors",
-							"id": "6c87be74-5ace-47da-a005-a22e32711aa7",
+							"name": "/status/doors",
+							"id": "d17eaa12-12cc-45e0-9a4f-6525ecad0417",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -111,7 +110,7 @@
 							},
 							"response": [
 								{
-									"id": "c9e1a0df-ad05-4c7d-baeb-453c59e2f343",
+									"id": "33538ee8-90d7-42c2-88ed-8d170e04f084",
 									"name": "Success",
 									"originalRequest": {
 										"method": "GET",
@@ -136,7 +135,6 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -144,19 +142,19 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"front\": {\n    \"left\": {\n      \"open\": \"<boolean>\"\n    },\n    \"right\": {\n      \"open\": \"<boolean>\"\n    }\n  },\n  \"rear\": {\n    \"left\": {\n      \"open\": \"<boolean>\"\n    },\n    \"right\": {\n      \"open\": \"<boolean>\"\n    }\n  }\n}"
+									"body": "{\n  \"front\": {\n    \"left\": {\n      \"open\": true\n    },\n    \"right\": {\n      \"open\": true\n    }\n  },\n  \"rear\": {\n    \"left\": {\n      \"open\": false\n    },\n    \"right\": {\n      \"open\": false\n    }\n  }\n}"
 								}
 							]
 						}
 					],
-					"id": "328fa906-b4fa-4896-9be0-c3f5e65c68b9"
+					"id": "c86aae85-8c38-4b93-bc3f-8d66bfc9ad9a"
 				},
 				{
 					"name": "engine",
 					"item": [
 						{
-							"name": "Engine",
-							"id": "0fe18716-7451-425c-8bfc-ff52f26c16a3",
+							"name": "/status/engine",
+							"id": "a1bc6ede-6dc9-4561-8b9f-180fc07045a0",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -182,7 +180,7 @@
 							},
 							"response": [
 								{
-									"id": "27b7ea23-4a88-4ffa-984e-328fa845ff9d",
+									"id": "aeb34ec4-40fc-40d2-9922-ff369981457e",
 									"name": "Success",
 									"originalRequest": {
 										"method": "GET",
@@ -207,7 +205,6 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -215,19 +212,19 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"coolantTemp\": \"<number>\",\n  \"oilPressure\": \"<number>\",\n  \"oilTemp\": \"<number>\",\n  \"rpm\": \"<number>\",\n  \"running\": \"<boolean>\"\n}"
+									"body": "{\n  \"coolantTemp\": 92,\n  \"oilPressure\": 4,\n  \"oilTemp\": 80,\n  \"rpm\": 800,\n  \"running\": true\n}"
 								}
 							]
 						}
 					],
-					"id": "480a5eb9-f60d-4e30-92af-9abab1dab4f9"
+					"id": "0c451873-40f1-45b8-b7bf-f897c41c4fe2"
 				},
 				{
 					"name": "fuel",
 					"item": [
 						{
-							"name": "Fuel",
-							"id": "6c666058-6d0a-4be9-9872-ec7e9adfc411",
+							"name": "/status/fuel",
+							"id": "60d0c7da-4c7d-4d0b-907c-4a4b8333b91e",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -253,7 +250,7 @@
 							},
 							"response": [
 								{
-									"id": "b061041b-dfc5-4f44-a2b4-660bc0d5c492",
+									"id": "20b41780-602b-449b-9086-9b2963aa81d3",
 									"name": "Success",
 									"originalRequest": {
 										"method": "GET",
@@ -278,7 +275,6 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -286,19 +282,19 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"ethanolContent\": \"<number>\",\n  \"gas\": \"<boolean>\",\n  \"level\": \"<number>\",\n  \"pressure\": \"<number>\"\n}"
+									"body": "{\n  \"ethanolContent\": 5,\n  \"gas\": true,\n  \"level\": 90,\n  \"pressure\": 40\n}"
 								}
 							]
 						}
 					],
-					"id": "179deab3-5716-4a7e-b1b3-6aaa0cf00c70"
+					"id": "a9144019-1351-4f02-8671-923c287ab126"
 				},
 				{
 					"name": "interior",
 					"item": [
 						{
-							"name": "Interior",
-							"id": "2aae2b62-a75b-42e9-98f0-e64a1d26d6ce",
+							"name": "/status/interior",
+							"id": "506b0dbf-4b96-4984-9a89-53313a9f4ad6",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -324,7 +320,7 @@
 							},
 							"response": [
 								{
-									"id": "2a5b8372-7336-4af9-8282-911b8a4b4c38",
+									"id": "2da25c39-7b34-484b-932d-ab5bce401086",
 									"name": "Success",
 									"originalRequest": {
 										"method": "GET",
@@ -349,7 +345,6 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -357,19 +352,19 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"alarm\": \"<string>\",\n  \"gear\": \"<string>\",\n  \"lights\": \"<string>\",\n  \"temp\": \"<number>\"\n}"
+									"body": "{\n  \"alarm\": \"off\",\n  \"gear\": \"p\",\n  \"lights\": \"on\",\n  \"temp\": 68\n}"
 								}
 							]
 						}
 					],
-					"id": "9eb608ce-a8cd-4c27-a148-82f9f8244ee8"
+					"id": "8b8a22fd-400c-4bd0-be8a-45e55eb5bca9"
 				},
 				{
 					"name": "lights",
 					"item": [
 						{
-							"name": "Lights",
-							"id": "740ad370-7d32-4f64-96a2-17f72211f5b9",
+							"name": "/status/lights",
+							"id": "f44e9e8c-1f05-49c2-916f-ba17ff41ed7a",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -395,7 +390,7 @@
 							},
 							"response": [
 								{
-									"id": "bcddaca5-c3e3-4f30-a69d-100588c5daed",
+									"id": "ab7f7cfa-fdb1-41a3-8e96-d6ca9bb2d4a3",
 									"name": "Success",
 									"originalRequest": {
 										"method": "GET",
@@ -420,7 +415,6 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -428,19 +422,19 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"brights\": \"<boolean>\",\n  \"daytime\": \"<boolean>\",\n  \"hazards\": \"<boolean>\",\n  \"leftSignal\": \"<boolean>\",\n  \"main\": \"<boolean>\",\n  \"rightSignal\": \"<boolean>\",\n  \"sidelight\": \"<boolean>\"\n}"
+									"body": "{\n  \"brights\": false,\n  \"daytime\": true,\n  \"hazards\": true,\n  \"leftSignal\": true,\n  \"main\": false,\n  \"rightSignal\": true,\n  \"sidelight\": false\n}"
 								}
 							]
 						}
 					],
-					"id": "59b2d754-60bb-4f85-ba34-8ea9f8ce07e6"
+					"id": "0e4a7768-0856-4ae0-9e40-ed6e64e19293"
 				},
 				{
 					"name": "odometer",
 					"item": [
 						{
-							"name": "Odometer",
-							"id": "c65adbae-902c-4a7b-ae39-2575a22ed05f",
+							"name": "/status/odometer",
+							"id": "0e364ef3-442a-4721-9f06-79d4b2c3cbd2",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -466,7 +460,7 @@
 							},
 							"response": [
 								{
-									"id": "e6012505-76e9-418c-a913-446cb619f4a5",
+									"id": "e59f8794-f4d4-4cae-9b11-67c56bfe884b",
 									"name": "Success",
 									"originalRequest": {
 										"method": "GET",
@@ -491,7 +485,6 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -499,19 +492,19 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"km\": \"<number>\",\n  \"miles\": \"<number>\"\n}"
+									"body": "{\n  \"km\": 100000,\n  \"miles\": 62000\n}"
 								}
 							]
 						}
 					],
-					"id": "f5c66394-147c-4cc3-8ac7-86220f54fee4"
+					"id": "76775a5c-e917-4a34-a403-fdbf4708d4e2"
 				},
 				{
 					"name": "roof",
 					"item": [
 						{
-							"name": "Roof",
-							"id": "59f33ba8-564a-48d0-b460-ceb0a5552333",
+							"name": "/status/roof",
+							"id": "122d35e4-a95d-4918-855c-6e89b82d44de",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -537,7 +530,7 @@
 							},
 							"response": [
 								{
-									"id": "2ddc1ba4-ed49-4b6e-9a64-3d8af9796c08",
+									"id": "c2766a6e-274a-484f-b389-e5d904d4ec32",
 									"name": "Success",
 									"originalRequest": {
 										"method": "GET",
@@ -562,7 +555,6 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -570,19 +562,19 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"convertible\": \"<string>\",\n  \"sunroofOpen\": \"<boolean>\"\n}"
+									"body": "{\n  \"convertible\": \"up\",\n  \"sunroof\": null\n}"
 								}
 							]
 						}
 					],
-					"id": "8140c642-c8e1-4a69-b89c-72b5b238f74e"
+					"id": "4bf74d2a-23a3-4b18-9107-69c1fdda37b5"
 				},
 				{
 					"name": "windows",
 					"item": [
 						{
-							"name": "Windows",
-							"id": "9a4c4da3-e1eb-473b-9ea7-a9b1e030850e",
+							"name": "/status/windows",
+							"id": "85674c0e-f192-43fa-812a-6174ffb8dc75",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -608,7 +600,7 @@
 							},
 							"response": [
 								{
-									"id": "30040c9e-c534-4d9e-8146-90472ba01059",
+									"id": "d484a849-7713-493a-b1ae-226e494e14b7",
 									"name": "Success",
 									"originalRequest": {
 										"method": "GET",
@@ -633,7 +625,6 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "html",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -641,16 +632,16 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"front\": {\n    \"left\": {\n      \"open\": \"<boolean>\"\n    },\n    \"right\": {\n      \"open\": \"<boolean>\"\n    }\n  },\n  \"rear\": {\n    \"left\": {\n      \"open\": \"<boolean>\"\n    },\n    \"right\": {\n      \"open\": \"<boolean>\"\n    }\n  }\n}"
+									"body": "{\n  \"front\": {\n    \"left\": {\n      \"open\": true\n    },\n    \"right\": {\n      \"open\": true\n    }\n  },\n  \"rear\": {\n    \"left\": {\n      \"open\": false\n    },\n    \"right\": {\n      \"open\": false\n    }\n  }\n}"
 								}
 							]
 						}
 					],
-					"id": "7963aab4-52a1-4698-b8f9-cbefbe5b2a40"
+					"id": "3a39fe39-42f0-4763-ab05-6f66f8ef8b43"
 				},
 				{
-					"name": "Complete Status",
-					"id": "f5be92c3-4846-4667-ade0-c739e4463d39",
+					"name": "/status",
+					"id": "a63449c0-b4c3-443d-9d06-c4aaf6746186",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -670,7 +661,7 @@
 					},
 					"response": [
 						{
-							"id": "dbbae753-4972-43bd-b313-44772fff366a",
+							"id": "0dfe8a4f-a7e7-4ed4-bf95-34aa3db7c065",
 							"name": "Status retrived successfully",
 							"originalRequest": {
 								"method": "GET",
@@ -689,7 +680,6 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "text",
-							"_postman_previewtype": "html",
 							"header": [],
 							"cookie": [],
 							"body": null
@@ -697,14 +687,36 @@
 					]
 				}
 			],
-			"id": "477e2cf3-3439-4892-b14c-697299688a2d"
+			"id": "c9964edc-a683-4c7d-8352-f7b03c702702"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ed124b2d-cd85-4be0-849a-b4ababd7a56d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "a1cb01a0-eebf-4c1e-a5dc-fbaaa7bd0922",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	],
 	"variable": [
 		{
-			"id": "c9d3c0b0-b9d8-4f85-aa32-56b6093ce9d0",
+			"id": "0d93ea49-9be9-4121-b228-7f2d15e634b2",
 			"key": "baseUrl",
-			"value": "{{url}}"
+			"value": "https://e12746be-9a5f-41ed-aa5f-c9d38458b014.mock.pstmn.io"
 		}
 	]
 }
